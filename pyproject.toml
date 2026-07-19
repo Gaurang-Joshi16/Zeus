@@ -1,0 +1,14 @@
+[tool.black]
+line-length = 88
+target-version = ['py310']
+include = '\.pyi?$'
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+lint.select = ["E", "F", "B"]
+lint.ignore = []
+
+[tool.isort]
+profile = "black"
+line_length = 88

@@ -1,0 +1,26 @@
+from enum import Enum
+
+
+class AIEngineType(str, Enum):
+    WAKE_WORD = "WAKE_WORD"
+    SPEAKER_VERIFICATION = "SPEAKER_VERIFICATION"
+    STT = "STT"
+    TTS = "TTS"
+    EMBEDDING = "EMBEDDING"
+    VISION = "VISION"
+    OCR = "OCR"
+    LLM = "LLM"
+    VAD = "VAD"
+
+
+class ProviderLifecycleState(str, Enum):
+    UNINITIALIZED = "UNINITIALIZED"
+    REGISTERED = "REGISTERED"
+    INITIALIZING = "INITIALIZING"
+    LOADING_MODEL = "LOADING_MODEL"
+    READY = "READY"
+    BUSY = "BUSY"
+    UNLOADING = "UNLOADING"
+    STOPPED = "STOPPED"
+    FAILED = "FAILED"
+    UNKNOWN = "UNKNOWN"

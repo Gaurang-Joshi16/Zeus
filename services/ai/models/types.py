@@ -1,0 +1,43 @@
+from enum import Enum
+
+
+class ModelCategory(str, Enum):
+    WAKE_WORD = "WAKE_WORD"
+    SPEAKER_VERIFICATION = "SPEAKER_VERIFICATION"
+    STT = "STT"
+    TTS = "TTS"
+    EMBEDDINGS = "EMBEDDINGS"
+    VISION = "VISION"
+    OCR = "OCR"
+    LLM = "LLM"
+    OTHER = "OTHER"
+
+
+class ModelFramework(str, Enum):
+    ONNX = "ONNX"
+    PYTORCH = "PYTORCH"
+    GGUF = "GGUF"
+    TENSORFLOW = "TENSORFLOW"
+    WHISPER = "WHISPER"
+    PICOVOICE = "PICOVOICE"
+    CUSTOM = "CUSTOM"
+
+
+class ModelStatus(str, Enum):
+    UNINITIALIZED = "UNINITIALIZED"
+    DOWNLOADING = "DOWNLOADING"
+    READY = "READY"
+    LOADED = "LOADED"
+    ERROR = "ERROR"
+    CORRUPTED = "CORRUPTED"
+
+
+class DownloadState(str, Enum):
+    QUEUED = "QUEUED"
+    CONNECTING = "CONNECTING"
+    DOWNLOADING = "DOWNLOADING"
+    VERIFYING = "VERIFYING"
+    COMPLETED = "COMPLETED"
+    FAILED = "FAILED"
+    CANCELLED = "CANCELLED"
+    PAUSED = "PAUSED"

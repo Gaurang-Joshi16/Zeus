@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+sqlalchemy
+pydantic
+black
+ruff
+isort
+sounddevice
+numpy

@@ -1,0 +1,16 @@
+{
+  "name": "zeus",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev:backend": "cd apps/backend && uvicorn main:app --reload --port 8000",
+    "dev:desktop": "cd apps/desktop && npm run tauri dev",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:desktop\"",
+    "install:all": "npm install && cd apps/desktop && npm install",
+    "lint": "cd apps/desktop && npm run lint",
+    "format": "cd apps/desktop && npm run format"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
